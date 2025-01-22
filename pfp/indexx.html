@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+    <title>Frico</title>
+    <style>
+      
+      
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" alt="logo" class="logo">
+          <img src="../img/logo.png" alt="logo_foto" />
+        </a>
+        <button class="burger-menu" aria-label="Toggle Navigation">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+        <div class="link-right">
+          <nav class="nav-links">
+            <ul class="link">
+              <li><a href="./pfp/indexx.html" class="link">PFP</a></li>
+              <li><a href="../index.html" class="link">ABOUT US</a></li>
+              <li><a href="../index.html" class="link">CONTACTS</a></li>
+              <li><a href="../index.html" class="link">FAQ</a></li>
+            </ul>
+          </nav>
+          <div id="linkll">
+            <a href="#" alt="discord" class="link-ds">
+              <img src="../icons/discord-brands-solid 1.png" alt="logo_foto" />
+            </a>
+            <a href="#" alt="x" class="link-x">
+              <img src="../icons/x-twitter-brands-solid 1.png" alt="logo_foto" />
+            </a>
+          </div>
+        </div>
+      </header>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="image-container" id="avatar">
+                <img id="background-layer" src="./foto/backgrounds/bayc_bg_xmastrees_red.png" alt="Background">
+                <img src="./foto/main.png" alt="" id="foto">
+                <img id="clothes-layer" src="./foto/Clothes/bayc_hoodie_monkyyellow.png" alt="Clothes">
+                <img id="hands-layer" src="./foto/hands/bayc_hands_turkey.png" alt="Hands">
+                <img id="accessories-layer" src="./foto/Accesories/bayc_newape.png" alt="Accessories">
+            </div>
+            <button onclick="downloadAvatar()">Download</button>
+        </div>
+
+        <div class="right-panel">
+            <select title="js" id="avatar-select" onchange="changeCategory()">
+                <option value="Clothes">Clothes</option>
+                <option value="Hands">Hands</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Backgrounds">Backgrounds</option>
+            </select>
+            
+            <div class="clothing-options" id="clothing-options">
+                <div class="clothes">
+                    <img src="./foto/Clothes/bayc_hoodie_apechainblue.png" alt="Shirt 1" onclick="selectLayer('clothes-layer', './foto/Clothes/bayc_hoodie_apechainblue.png')">
+                    <img src="./foto/Clothes/bayc_hoodie_atid.png" alt="Shirt 2" onclick="selectLayer('clothes-layer', './foto/Clothes/bayc_hoodie_atid.png')">
+                    <img src="./foto/Clothes/bayc_hoodie_monkyyellow.png" alt="Shirt 3" onclick="selectLayer('clothes-layer', './foto/Clothes/bayc_hoodie_monkyyellow.png')">
+                </div>
+                <div class="hands" style="display: none;">
+                    <img src="./foto/hands/bayc_hands_gm.png" alt="Hand 1" onclick="selectLayer('hands-layer', './foto/hands/bayc_hands_gm.png')">
+                    <img src="./foto/hands/bayc_hands_shhhdark.png" alt="Hand 2" onclick="selectLayer('hands-layer', './foto/hands/bayc_hands_shhhdark.png')">
+                    <img src="./foto/hands/bayc_hands_turkey.png" alt="Hand 3" onclick="selectLayer('hands-layer', './foto/hands/bayc_hands_turkey.png')">
+                </div>
+                <div class="accessories" style="display: none;">
+                    <img src="./foto/Accesories/bayc_confetti.png" alt="Accessory 1" onclick="selectLayer('accessories-layer', './foto/Accesories/bayc_confetti.png')">
+                    <img src="./foto/Accesories/bayc_halloween_pumpkin_candy.png" alt="Accessory 2" onclick="selectLayer('accessories-layer', './foto/Accesories/bayc_halloween_pumpkin_candy.png')">
+                    <img src="./foto/Accesories/bayc_newape.png" alt="Accessory 3" onclick="selectLayer('accessories-layer', './foto/Accesories/bayc_newape.png')">
+                </div>
+                <div class="backgrounds" style="display: none;">
+                    <img src="./foto/backgrounds/bayc_bg_apechain.png" alt="Background 1" onclick="selectLayer('background-layer', './foto/backgrounds/bayc_bg_apechain.png')">
+                    <img src="./foto/backgrounds/bayc_bg_apechain_black.png" alt="Background 2" onclick="selectLayer('background-layer', './foto/backgrounds/bayc_bg_apechain_black.png')">
+                    <img src="./foto/backgrounds/bayc_bg_xmastrees_red.png" alt="Background 3" onclick="selectLayer('background-layer', './foto/backgrounds/bayc_bg_xmastrees_red.png')">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function changeCategory() {
+            const selectedCategory = document.getElementById('avatar-select').value.toLowerCase();
+            document.querySelectorAll('.clothing-options > div').forEach(div => {
+                div.style.display = 'none';
+            });
+            document.querySelector(`.${selectedCategory}`).style.display = 'flex';
+        }
+
+        function selectLayer(layerId, src) {
+            const layer = document.getElementById(layerId);
+            layer.src = src;
+        }
+
+        function downloadAvatar() {
+            const avatar = document.getElementById('avatar');
+            html2canvas(avatar).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL();
+                link.download = 'avatar.png';
+                link.click();
+            });
+        }
+        const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  burgerMenu.classList.toggle('active');
+});
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>

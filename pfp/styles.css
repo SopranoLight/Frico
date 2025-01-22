@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shadows+Into+Light+Two&display=swap");
+
+/* .calistoga-regular {
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .shadows-into-light-two-regular {
+    font-family: "Shadows Into Light Two", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+  .albert-sans{
+    font-family: "Albert Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }   
+
+  .inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #f3ff50;
+  --color-text: #ffffff;
+  --color-btn: #7bebff;
+
+  --font-family-Calistoga: "Calistoga", serif;
+  --font-family-Shadows: "Shadows Into Light Two", serif;
+  --font-family-AlbertSans: "Albert Sans", serif;
+  --font-family-Inter: "Inter", serif;
+}
+body {
+  background-color: #2e2453;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 87px 72px 87px;
+  color: var(--color-btn);
+}
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-menu .line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-text);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+}
+.link-right{
+  display: flex;
+  gap: 70px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 51px;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-family: var(--font-family-Shadows), sans-serif;
+  line-height: 1.5;
+}
+
+#linkll{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-ds{
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.link-x{
+  width: 30px;
+  height: 30px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-container {
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  position: relative;
+}
+.image-container img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+.right-panel {
+  display: flex;
+  flex-direction: column;
+}
+.right-panel select, .right-panel button {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+.clothing-options {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.clothing-options img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.clothing-options img.selected {
+  border-color: #000;
+}
+#foto{
+  max-width: none;
+}
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .link {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  #linkll{
+  display: none;
+}
+  
+ 
+}
+
+/* Для телефонів (ширина екрану до 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+    padding-bottom: 40px;
+    gap: 20px;
+  }
+.foto-bg{
+  width: 400px;
+  height: 300px;
+}
+.twitter{
+  transform: translate(50px, 150px);
+}
+ .discord{
+  transform: translate(100px, 200px);
+}
+
+  .link {
+    gap: 10px;
+  }
+  .logo{
+    display: none;
+  }
+  .burger-menu {
+    display: flex;
+    position: relative;
+    top: 15px;
+    
+  }
+
+  .link-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+
+  button {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+  .about-us-block,
+  .about-us-block-two {
+    
+    flex-direction: column;
+  }
+}
+

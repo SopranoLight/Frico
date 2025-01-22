@@ -1,0 +1,633 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shadows+Into+Light+Two&display=swap");
+
+/* .calistoga-regular {
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .shadows-into-light-two-regular {
+    font-family: "Shadows Into Light Two", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+  .albert-sans{
+    font-family: "Albert Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }   
+
+  .inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #f3ff50;
+  --color-text: #ffffff;
+  --color-btn: #7bebff;
+
+  --font-family-Calistoga: "Calistoga", serif;
+  --font-family-Shadows: "Shadows Into Light Two", serif;
+  --font-family-AlbertSans: "Albert Sans", serif;
+  --font-family-Inter: "Inter", serif;
+}
+body {
+  background-color: #2e2453;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 87px 72px 87px;
+  color: var(--color-btn);
+}
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-menu .line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-text);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+}
+.link-right{
+  display: flex;
+  gap: 70px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 51px;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-family: var(--font-family-Shadows), sans-serif;
+  line-height: 1.5;
+}
+
+#linkll{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-ds{
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+  justify-content: center;
+}
+.link-x{
+  width: 30px;
+  height: 30px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  padding-bottom: 100px;
+}
+.bg-main {
+  position: absolute;
+  width: 0px; /* Займає всю ширину екрана */
+  height: 100vh; /* Висота дорівнює висоті вікна */
+  left: 0;
+}
+
+.stickOne {
+  background-image: url(./img/палки.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20vw; /* Ширина 20% від ширини екрана */
+  height: 20vw; /* Висота пропорційна ширині */
+  position: absolute;
+  left: 450px;
+  top: 340px; /* Розташування відносно ширини та висоти екрана */
+  transform: rotate(20deg); ; /* Розташування відносно ширини та висоти екрана */
+  z-index: -100;
+}
+
+.stickTwo {
+  background-image: url(./img/палки1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 10vw; /* Ширина 10% від ширини екрана */
+  height: 15vw; /* Висота пропорційна ширині */
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  transform: rotate(-20deg); /* Розташування відносно ширини та висоти екрана */
+  z-index: -100;
+
+}
+
+.name {
+  background-image: url(./img/TEXT.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 300px; /* Розташування відносно ширини та висоти екрана */
+  width: 30vw; /* Ширина 20% від ширини екрана */
+  height: 20vw; /* Висота пропорційна ширині */
+  z-index: -100;
+
+}
+
+
+.frico {
+  max-width: 400px;
+  height: auto;
+}
+
+.frico img {
+  width: 100%;
+  height: auto;
+}
+
+.frico_info {
+  max-width: 500px;
+
+  text-align: left;
+}
+
+.frico_info h1 {
+  font-size: 6rem;
+  font-family: var(--font-family-AlbertSans, sans-serif);
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.frico_info p {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  font-family: var(--font-family-Shadows), sans-serif;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.btn_pfp a {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: none;
+  border: #7bebff 2px solid;
+  color: var(--color-btn);
+  font-family: var(--font-family-AlbertSans, sans-serif);
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn_pfp a:hover {
+  background-color: none;
+}
+
+/* section mouse-efect start */
+
+.mouse-efect {
+  background-color: rgb(189, 183, 209);
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.image {
+  width: 60vmin;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.image[data-status="inactive"] {
+  display: none;
+}
+.image[data-status="active"] {
+  display: block;
+}
+
+.about-us {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.about-us-content {
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us-block {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  padding: 0 0 0 100px;
+}
+.about-us-block-two {
+  display: flex;
+  justify-content: end;
+  gap: 100px;
+  padding: 0 100px 0 0;
+}
+.about-us-item {
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+.about-us-h1 {
+  font-size: 200px;
+  font-family: var(--font-family-Shadows), sans-serif;
+  color: var(--color-text);
+}
+.about-us-item h2 {
+  font-family: var(--font-family-Inter), sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 23px;
+  color: #f3ff50;
+}
+
+.about-us-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-family-Inter), sans-serif;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 100px;
+  font-family: "Shadows Into Light Two", cursive;
+  margin-bottom: 40px;
+  color: var(--color-text);
+}
+
+.faq-item {
+  border-bottom: 1px solid #ffffff;
+  padding: 15px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-item:hover {
+  background-color: #3a2a7a;
+}
+
+.faq-item h3 {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-family: var(--font-family-Inter);
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item .plus {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .plus {
+  transform: rotate(45deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.faq-content.visible {
+  max-height: 100px; /* Adjust as needed for content size */
+  color: white;
+}
+
+.slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2453;
+}
+
+.slider {
+  position: relative;
+  width: 900px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foto-bg {
+  background-image: url(./img/Group\ 1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 800px;
+  height: 700px;
+  position: relative;
+}
+.twitter {
+  max-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px salmon solid;
+  padding: 10px;
+  position: relative;
+  transform: translate(200px, 400px);
+}
+.discord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px salmon solid;
+  padding: 10px;
+  position: relative;
+  transform: translate(250px, 470px);
+}
+/* section mouse-efect end */
+@media (max-width: 1440px) {
+  .stickOne{
+    display: none;
+  }
+ .name{
+  left: 200px;
+ }
+}
+/* Для планшетів (ширина екрану до 1024px) */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .link {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  #linkll{
+  display: none;
+}
+  
+  .stickTwo {
+  left: 130px;
+  }
+  .name{
+    left: 500px;
+  }
+
+  .frico {
+    max-width: 300px;
+  }
+
+  .frico_info h1 {
+    font-size: 3rem;
+  }
+
+  .frico_info p {
+    font-size: 1.2rem;
+  }
+
+  .btn_pfp a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .about-us-h1 {
+    font-size: 100px;
+  }
+
+  .about-us-block,
+  .about-us-block-two {
+    
+    align-items: center;
+    padding: 0;
+    gap: 50px;
+  }
+
+  .faq-title {
+    font-size: 50px;
+  }
+}
+
+/* Для телефонів (ширина екрану до 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+    gap: 20px;
+  }
+.foto-bg{
+  width: 400px;
+  height: 300px;
+}
+.twitter{
+  transform: translate(50px, 150px);
+}
+ .discord{
+  transform: translate(100px, 200px);
+}
+.slider-section{
+  height: 100%;
+}
+  .link {
+    gap: 10px;
+  }
+  .logo{
+    display: none;
+  }
+  .burger-menu {
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 0px;
+  }
+
+  .link-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .main {
+    padding: 10px;
+    padding-bottom: 60px;
+  }
+  .bg-main {
+   display: none; /* Прибрати зайві елементи */
+    
+ }
+  .frico {
+    max-width: 200px;
+  }
+
+  .frico_info h1 {
+    font-size: 2.5rem;
+  }
+
+  .frico_info p {
+    font-size: 1rem;
+  }
+
+  .btn_pfp a {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+
+  .about-us-h1 {
+    font-size: 70px;
+  }
+
+  .faq-title {
+    font-size: 40px;
+  }
+
+  .slider {
+    width: 90%;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+  .about-us-block,
+  .about-us-block-two {
+    
+    flex-direction: column;
+  }
+}
+
