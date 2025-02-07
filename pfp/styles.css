@@ -251,6 +251,9 @@ align-items: center;
     padding-bottom: 40px;
     gap: 20px;
   }
+.container{
+  flex-direction: column-reverse;
+}
 .foto-bg{
   width: 400px;
   height: 300px;

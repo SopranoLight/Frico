@@ -147,7 +147,7 @@ align-items: center;
   align-items: center;
   justify-content: space-around;
   padding: 50px;
-  padding-bottom: 135px;
+  padding-bottom: 145px;
 }
 .bg-main {
   position: absolute;
@@ -603,7 +603,11 @@ footer {
     padding: 10px;
     gap: 20px;
   }
-  
+  .wrap{height: 20vh;}
+  .marquee__content img {
+    width: 100px;
+    height: 150px;
+  }
 .foto-bg{
   width: 400px;
   height: 300px;
