@@ -1,4 +1,3 @@
-// const images = document.getElementsByClassName("image");
 
 // let globalIndex = 0,
 //     last = { x: 0, y: 0 };
