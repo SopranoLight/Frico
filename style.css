@@ -711,5 +711,11 @@ footer {
   .society__article{
     display: inline;
   }
+  /* .order{
+    order: 1 2;
+  }
+  .order_1{
+    order: 0;
+  } */
 }
 
