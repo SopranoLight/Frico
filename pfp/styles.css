@@ -251,9 +251,35 @@ align-items: center;
     padding-bottom: 40px;
     gap: 20px;
   }
-.container{
-  flex-direction: column-reverse;
-}
+  .container {
+    flex-direction: column-reverse; /* Розташувати елементи вертикально */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left-panel {
+    width: 100%;
+    align-items: center;
+  }
+
+  .image-container {
+    width: 250px; /* Зменшити розмір контейнера для аватару */
+    height: 250px;
+  }
+
+  .right-panel {
+    width: 100%;
+    align-items: center;
+  }
+
+  .clothing-options {
+    grid-template-columns: repeat(2, 1fr); /* Зменшити кількість колонок */
+  }
+
+  .clothing-options img {
+    width: 60px; /* Зменшити розмір іконок */
+    height: 60px;
+  }
 .foto-bg{
   width: 400px;
   height: 300px;
