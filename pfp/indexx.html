@@ -23,17 +23,17 @@
         <div class="link-right">
             <nav class="nav-links">
                 <ul class="link">
-                    <li><a href="./pfp/indexx.html" class="link">PFP</a></li>
+                    <li><a href="#" class="link">PFP</a></li>
                     <li><a href="../index.html" class="link">ABOUT US</a></li>
                     <li><a href="../index.html" class="link">CONTACTS</a></li>
                     <li><a href="../index.html" class="link">FAQ</a></li>
                 </ul>
             </nav>
             <div id="linkll">
-                <a href="#" alt="discord" class="link-ds">
+                <a href="https://discord.gg/frico" alt="discord" class="link-ds">
                     <img src="../icons/discord-brands-solid 1.png" alt="Discord Logo" />
                 </a>
-                <a href="#" alt="x" class="link-x">
+                <a href="https://x.com/frico_xyz" alt="x" class="link-x">
                     <img src="../icons/x-twitter-brands-solid 1.png" alt="Twitter Logo" />
                 </a>
             </div>
@@ -100,38 +100,7 @@
         </div>
     </div>
 
-    <script>
-        function changeCategory() {
-            const selectedCategory = document.getElementById('avatar-select').value.toLowerCase();
-            document.querySelectorAll('.clothing-options > div').forEach(div => {
-                div.style.display = 'none';
-            });
-            document.querySelector(`.${selectedCategory}`).style.display = 'flex';
-        }
-
-        function selectLayer(layerId, src) {
-            const layer = document.getElementById(layerId);
-            layer.src = src;
-        }
-
-        function downloadAvatar() {
-            const avatar = document.getElementById('avatar');
-            html2canvas(avatar).then(canvas => {
-                const link = document.createElement('a');
-                link.href = canvas.toDataURL();
-                link.download = 'avatar.png';
-                link.click();
-            });
-        }
-
-        const burgerMenu = document.querySelector('.burger-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        burgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            burgerMenu.classList.toggle('active');
-        });
-    </script>
+    <script src="./jsss.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
 </html>

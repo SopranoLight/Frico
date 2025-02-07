@@ -30,7 +30,7 @@ function showPrevSlide() {
 }
 
 // Автоматична зміна слайдів кожні 5 секунд
-setInterval(showNextSlide, 3000);
+setInterval(showNextSlide, 8000);
 
 
 
