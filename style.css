@@ -59,6 +59,8 @@ img {
   --font-family-Shadows: "Shadows Into Light Two", serif;
   --font-family-AlbertSans: "Albert Sans", serif;
   --font-family-Inter: "Inter", serif;
+  --gap: 2rem; /* Відстань між картинками */
+  --duration: 80s; /* Тривалість повного циклу анімації */
 }
 body {
   background-color: #2e2453;
@@ -95,22 +97,30 @@ header {
   display: flex;
 }
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url(./icons/fricologo2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .link-right{
   display: flex;
-  gap: 70px;
+  gap: 90px;
 }
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 51px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--color-text);
   font-family: var(--font-family-Shadows), sans-serif;
   line-height: 1.5;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 #linkll{
@@ -137,7 +147,7 @@ align-items: center;
   align-items: center;
   justify-content: space-around;
   padding: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 135px;
 }
 .bg-main {
   position: absolute;
@@ -154,8 +164,8 @@ align-items: center;
   width: 20vw; /* Ширина 20% від ширини екрана */
   height: 20vw; /* Висота пропорційна ширині */
   position: absolute;
-  left: 450px;
-  top: 340px; /* Розташування відносно ширини та висоти екрана */
+  left: 620px;
+  top: 370px; /* Розташування відносно ширини та висоти екрана */
   transform: rotate(20deg); ; /* Розташування відносно ширини та висоти екрана */
   z-index: -100;
 }
@@ -169,7 +179,7 @@ align-items: center;
   height: 15vw; /* Висота пропорційна ширині */
   position: absolute;
   left: 50px;
-  top: 100px;
+  top: 200px;
   transform: rotate(-20deg); /* Розташування відносно ширини та висоти екрана */
   z-index: -100;
 
@@ -182,7 +192,8 @@ align-items: center;
   background-size: cover;
   position: absolute;
   transform: rotate(45deg);
-  left: 300px; /* Розташування відносно ширини та висоти екрана */
+  top: 2px;
+  left: 400px; /* Розташування відносно ширини та висоти екрана */
   width: 30vw; /* Ширина 20% від ширини екрана */
   height: 20vw; /* Висота пропорційна ширині */
   z-index: -100;
@@ -191,7 +202,7 @@ align-items: center;
 
 
 .frico {
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -218,12 +229,12 @@ align-items: center;
   color: var(--color-text);
   font-family: var(--font-family-Shadows), sans-serif;
   line-height: 1.5;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 .btn_pfp a {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 20px 35px;
   background-color: none;
   border: #7bebff 2px solid;
   color: var(--color-btn);
@@ -241,25 +252,52 @@ align-items: center;
 
 /* section mouse-efect start */
 
-.mouse-efect {
-  background-color: rgb(189, 183, 209);
+.wrap{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #561375;
+  overflow: hidden;
+}
+.marquee {
+  display: flex;
+  overflow: hidden;
   width: 100%;
-  height: 600px;
   position: relative;
 }
-.image {
-  width: 60vmin;
 
+.marquee__content {
+  display: flex;
+  gap: var(--gap);
+  animation: scroll var(--duration) linear infinite;
+}
+
+.marquee__content img {
+  width: 600px; /* Розмір картинки */
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Ключові кадри для плавної анімації */
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+/* Дублювання контенту для плавного переходу */
+.marquee__content:nth-child(2) {
   position: absolute;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 100%;
 }
-.image[data-status="inactive"] {
-  display: none;
-}
-.image[data-status="active"] {
-  display: block;
-}
-
 .about-us {
   text-align: center;
   padding: 50px 20px;
@@ -271,103 +309,90 @@ align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.about-us-block {
-  display: flex;
-  gap: 100px;
+.about-us-block-paragraf{
+display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 0 0 100px;
+  gap: 50px;
 }
-.about-us-block-two {
-  display: flex;
-  justify-content: end;
-  gap: 100px;
-  padding: 0 100px 0 0;
-}
-.about-us-item {
-  max-width: 300px;
-  padding: 20px;
+.about-us-paragraf{
+  max-width: 400px;
   text-align: center;
-}
-.about-us-h1 {
-  font-size: 200px;
-  font-family: var(--font-family-Shadows), sans-serif;
-  color: var(--color-text);
-}
-.about-us-item h2 {
-  font-family: var(--font-family-Inter), sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 23px;
-  color: #f3ff50;
-}
-
-.about-us-item p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   font-weight: 400;
   color: var(--color-text);
   font-family: var(--font-family-Inter), sans-serif;
 }
 
-.faq-section {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-}
 
-.faq-title {
+.society{
+  margin-bottom: 100px;
   text-align: center;
-  font-size: 100px;
-  font-family: "Shadows Into Light Two", cursive;
-  margin-bottom: 40px;
-  color: var(--color-text);
 }
 
-.faq-item {
-  border-bottom: 1px solid #ffffff;
-  padding: 15px 0;
-  cursor: pointer;
-  position: relative;
+.society__article{
+ display: flex;
+ justify-content: center;
+ height: 555px;
+ gap: 3.125rem;
 }
-
-.faq-item:hover {
-  background-color: #3a2a7a;
+.society__all-info{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: 2.5rem;
+ max-width: 600px;
 }
+.society__title{
+  text-align: center;
+  font-family: var(var(--font-family-Shadows), sans-serif);
+ color: var(--color-text);
+  font-size: 2.5rem;
+  font-family: "Shadows Into Light Two", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.society__paragraf{
+ text-align: center;
+ font-family: var(var(--font-family-Calistoga), sans-serif);
+color: var(--color-text);
+ font-size: 1.5rem;
+ font-family: "Shadows Into Light Two", serif;
+ font-weight: 400;
+ font-style: normal;
 
-.faq-item h3 {
-  color: var(--color-primary);
-  font-size: 20px;
-  font-family: var(--font-family-Inter);
-  margin: 0;
+}
+.society__gif{
+ border-radius: 100px;
+}
+.society__foto{
+ width: 554px;
+ height: 554px;
+ border-radius: 100px;
+}
+.order{
+ order: 2 1;
+}
+.order_1{
+ order: 1;
+}
+.about-us-block {
   display: flex;
-  justify-content: space-between;
+  gap: 100px;
   align-items: center;
+  padding: 0 0 0 100px;
 }
 
-.faq-item .plus {
-  font-size: 24px;
-  color: #ffffff;
-  font-weight: bold;
-  transition: transform 0.3s;
-}
 
-.faq-item.active .plus {
-  transform: rotate(45deg);
-}
-
-.faq-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.7s ease-in-out;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-top: 10px;
-}
-
-.faq-content.visible {
-  max-height: 100px; /* Adjust as needed for content size */
-  color: white;
+.about-us-h1 {
+  font-size: 200px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: var(--font-family-AlbertSans, sans-serif);
+  color: var(--color-text);
+ 
 }
 
 .slider-section {
@@ -401,7 +426,7 @@ align-items: center;
   object-fit: cover;
 }
 
-button {
+ .btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -415,7 +440,7 @@ button {
   z-index: 10;
 }
 
-button:hover {
+.btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -464,13 +489,36 @@ footer {
   transform: translate(250px, 470px);
 }
 /* section mouse-efect end */
-@media (max-width: 1440px) {
+@media (max-width: 1660px) {
   .stickOne{
     display: none;
   }
+ 
+}
+@media (max-width: 1440px) {
+  
  .name{
   left: 200px;
  }
+}
+@media(max-width: 1250px){
+  .gif__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .society__foto{
+    width: 400px;
+    height: 400px;
+  }
+  .society__gif{
+    width: 400px;
+    height: 400px;
+  }
+  .society__all-info{
+    padding: 0 10px;
+  }
 }
 /* Для планшетів (ширина екрану до 1024px) */
 @media (max-width: 1024px) {
@@ -537,16 +585,33 @@ footer {
   }
 }
 
+@media(max-width: 900px) {
+
+  .society__foto{
+    padding: 0 10px;
+    width: 300px;
+    height: 300px;
+  }
+  .society__gif{
+    padding: 0 10px;
+    width: 300px;
+    height: 300px;
+  }}
 /* Для телефонів (ширина екрану до 768px) */
 @media (max-width: 768px) {
   header {
     padding: 10px;
     gap: 20px;
   }
+  
 .foto-bg{
   width: 400px;
   height: 300px;
 }
+.society__article{
+  gap: 0px;
+}
+
 .twitter{
   transform: translate(50px, 150px);
 }
@@ -628,6 +693,19 @@ footer {
   .about-us-block-two {
     
     flex-direction: column;
+  }
+  .society__foto{
+    padding: 10px 10px;
+    width: 200px;
+    height: 200px;
+  }
+  .society__gif{
+    padding: 10px 10px;
+    width: 200px;
+    height: 200px;
+  }
+  .society__article{
+    display: inline;
   }
 }
 

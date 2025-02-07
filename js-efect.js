@@ -1,103 +1,14 @@
 
-// let globalIndex = 0,
-//     last = { x: 0, y: 0 };
 
-// const activate = (image, x, y) => {
-//   image.style.left = `${x}px`;
-//   image.style.top = `${y}px`;
-//   image.style.zIndex = globalIndex;
-
-//   image.dataset.status = "active";
-
-//   last = { x, y };
-// }
-
-// const distanceFromLast = (x, y) => {
-//   return Math.hypot(x - last.x, y - last.y);
-// }
-
-// const handleOnMove = e => {
-//   if(distanceFromLast(e.clientX, e.clientY) > (window.innerWidth / 20)) {
-//     const lead = images[globalIndex % images.length],
-//           tail = images[(globalIndex - 5) % images.length];
-
-//     activate(lead, e.clientX, e.clientY);
-
-//     if(tail) tail.dataset.status = "inactive";
-    
-//     globalIndex++;
-//   }
-// }
-
-// const mouseEffectSection = document.querySelector(".mouse-efect");
-// mouseEffectSection.onmousemove = e => handleOnMove(e);
-
-// window.ontouchmove = e => handleOnMove(e.touches[0]);
-const section = document.querySelector(".mouse-efect");
-const images = section.getElementsByClassName("image");
-
-let globalIndex = 0,
-    last = { x: 0, y: 0 };
-
-const activate = (image, x, y) => {
-  image.style.left = `${x}px`;
-  image.style.top = `${y}px`;
-  image.style.zIndex = globalIndex;
-
-  image.dataset.status = "active";
-
-  last = { x, y };
-}
-
-const distanceFromLast = (x, y) => {
-  return Math.hypot(x - last.x, y - last.y);
-}
-
-const handleOnMove = e => {
-  if(distanceFromLast(e.clientX, e.clientY) > (window.innerWidth / 20)) {
-    const lead = images[globalIndex % images.length],
-          tail = images[(globalIndex - 5) % images.length];
-
-    activate(lead, e.clientX, e.clientY);
-
-    if(tail) tail.dataset.status = "inactive";
-    
-    globalIndex++;
-  }
-}
-
-const hideAllImages = () => {
-  for (let i = 0; i < images.length; i++) {
-    images[i].dataset.status = "inactive";
-  }
-}
-
-section.addEventListener("mouseenter", () => {
-  window.onmousemove = e => handleOnMove(e);
-  window.ontouchmove = e => handleOnMove(e.touches[0]);
-});
-
-section.addEventListener("mouseleave", () => {
-  window.onmousemove = null;
-  window.ontouchmove = null;
-  hideAllImages();
-});
-
-
-
-
-
-
-
-
-
-document.querySelectorAll('.faq-item').forEach(item => {
-  item.addEventListener('click', () => {
-      item.classList.toggle('active');
-      const content = item.querySelector('.faq-content');
-      content.classList.toggle('visible');
+const faqItems = document.querySelectorAll('.faq-item');  // Додано точку перед 'faq-item'
+faqItems.forEach(item => {
+  item.addEventListener('click', function() {
+    console.log('FAQ item clicked');
+    this.classList.toggle('active');
+    const content = this.querySelector('.faq-content');
+    content.classList.toggle('visible');  // Відображення або приховання контенту
   });
-})
+});
 
 
 let index = 0;
@@ -119,7 +30,7 @@ function showPrevSlide() {
 }
 
 // Автоматична зміна слайдів кожні 5 секунд
-setInterval(showNextSlide, 5000);
+setInterval(showNextSlide, 3000);
 
 
 
@@ -130,3 +41,42 @@ burgerMenu.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   burgerMenu.classList.toggle('active');
 });
+
+
+function scrollTo(element){
+  window.scroll({
+      left: 0,
+      top: element.getBoundingClientRect().top + window.scrollY,
+      behavior: 'smooth'
+  })
+}
+
+var aboutHeader = document.querySelector('.button')
+var anti = document.querySelector('#sos')
+
+
+
+aboutHeader.addEventListener('click', () => {
+  scrollTo(anti);
+
+}
+)
+
+var garboard = document.querySelector('.buttonn')
+var who = document.querySelector('#fotter')
+
+garboard.addEventListener('click', () => {
+  scrollTo(who);
+
+}
+)
+
+
+var garboard = document.querySelector('.buttonn')
+var society = document.querySelector('#society')
+
+garboard.addEventListener('click', () => {
+  scrollTo(society);
+
+}
+)

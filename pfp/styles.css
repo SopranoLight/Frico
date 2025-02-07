@@ -100,12 +100,17 @@ header {
   display: flex;
 }
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url(../icons/fricologo2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .link-right{
   display: flex;
-  gap: 70px;
+  gap: 90px;
 }
 .link {
   display: flex;
@@ -149,6 +154,20 @@ align-items: center;
   flex-direction: column;
   align-items: center;
 }
+.left-panel button{
+ background-color: #ffffff00;
+  display: inline-block;
+  padding: 10px 35px;
+  background-color: none;
+  border: #7bebff 2px solid;
+  color: var(--color-btn);
+  font-family: var(--font-family-AlbertSans, sans-serif);
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
 .image-container {
   width: 300px;
   height: 300px;
@@ -156,13 +175,19 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000;
+ 
   position: relative;
+  margin-bottom: 30px;
 }
 .image-container img {
   position: absolute;
   max-width: 100%;
   max-height: 100%;
+}
+.clothing-options{
+  background: #ffffff;
+  border: #000 solid 1px;
+  
 }
 .right-panel {
   display: flex;
@@ -182,10 +207,13 @@ align-items: center;
   width: 80px;
   height: 80px;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #9c7676;
+  margin: 5px;
 }
 .clothing-options img.selected {
-  border-color: #000;
+  border-color: #ff0000;
 }
 #foto{
   max-width: none;

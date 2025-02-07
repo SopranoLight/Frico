@@ -7,48 +7,48 @@
     <link rel="icon" type="image/x-icon" href="../img/logo.png">
     <title>Frico</title>
     <style>
-      
-      
+        /* Add any inline styles here if needed */
     </style>
 </head>
 <body>
     <header>
         <a href="../index.html" alt="logo" class="logo">
-          <img src="../img/logo.png" alt="logo_foto" />
+          
         </a>
         <button class="burger-menu" aria-label="Toggle Navigation">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
         </button>
         <div class="link-right">
-          <nav class="nav-links">
-            <ul class="link">
-              <li><a href="./pfp/indexx.html" class="link">PFP</a></li>
-              <li><a href="../index.html" class="link">ABOUT US</a></li>
-              <li><a href="../index.html" class="link">CONTACTS</a></li>
-              <li><a href="../index.html" class="link">FAQ</a></li>
-            </ul>
-          </nav>
-          <div id="linkll">
-            <a href="#" alt="discord" class="link-ds">
-              <img src="../icons/discord-brands-solid 1.png" alt="logo_foto" />
-            </a>
-            <a href="#" alt="x" class="link-x">
-              <img src="../icons/x-twitter-brands-solid 1.png" alt="logo_foto" />
-            </a>
-          </div>
+            <nav class="nav-links">
+                <ul class="link">
+                    <li><a href="./pfp/indexx.html" class="link">PFP</a></li>
+                    <li><a href="../index.html" class="link">ABOUT US</a></li>
+                    <li><a href="../index.html" class="link">CONTACTS</a></li>
+                    <li><a href="../index.html" class="link">FAQ</a></li>
+                </ul>
+            </nav>
+            <div id="linkll">
+                <a href="#" alt="discord" class="link-ds">
+                    <img src="../icons/discord-brands-solid 1.png" alt="Discord Logo" />
+                </a>
+                <a href="#" alt="x" class="link-x">
+                    <img src="../icons/x-twitter-brands-solid 1.png" alt="Twitter Logo" />
+                </a>
+            </div>
         </div>
-      </header>
+    </header>
 
     <div class="container">
         <div class="left-panel">
             <div class="image-container" id="avatar">
-                <img id="background-layer" src="./foto/backgrounds/bayc_bg_xmastrees_red.png" alt="Background">
-                <img src="./foto/main.png" alt="" id="foto">
-                <img id="clothes-layer" src="./foto/Clothes/bayc_hoodie_monkyyellow.png" alt="Clothes">
-                <img id="hands-layer" src="./foto/hands/bayc_hands_turkey.png" alt="Hands">
-                <img id="accessories-layer" src="./foto/Accesories/bayc_newape.png" alt="Accessories">
+                <img id="background-layer" src="./foto/backgrounds/berry.png" alt="Background">
+                <img src="./foto/body.PNG" alt="Body" id="foto">
+                <img id="clothes-layer" src="./foto/Clothes/grey shirt.PNG" alt="Clothes">
+                <img id="beak-layer" src="./foto/beak/mustache.PNG" alt="Beak">
+                <img id="eyes-layer" src="./foto/eyes/base.PNG" alt="Eyes">
+                <img id="head-layer" src="./foto/Head/black hair.PNG" alt="Head">
             </div>
             <button onclick="downloadAvatar()">Download</button>
         </div>
@@ -56,34 +56,47 @@
         <div class="right-panel">
             <select title="js" id="avatar-select" onchange="changeCategory()">
                 <option value="Clothes">Clothes</option>
-                <option value="Hands">Hands</option>
-                <option value="Accessories">Accessories</option>
+                <option value="Head">Head</option>
+                <option value="Beak">Beak</option>
+                <option value="Eyes">Eyes</option>
                 <option value="Backgrounds">Backgrounds</option>
             </select>
             
             <div class="clothing-options" id="clothing-options">
                 <div class="clothes">
-                    <img src="./foto/Clothes/bayc_hoodie_apechainblue.png" alt="Shirt 1" onclick="selectLayer('clothes-layer', './foto/Clothes/bayc_hoodie_apechainblue.png')">
-                    <img src="./foto/Clothes/bayc_hoodie_atid.png" alt="Shirt 2" onclick="selectLayer('clothes-layer', './foto/Clothes/bayc_hoodie_atid.png')">
-                    <img src="./foto/Clothes/bayc_hoodie_monkyyellow.png" alt="Shirt 3" onclick="selectLayer('clothes-layer', './foto/Clothes/bayc_hoodie_monkyyellow.png')">
+                    <img src="./foto/Clothes/grey shirt.PNG" alt="Shirt 1" onclick="selectLayer('clothes-layer', './foto/Clothes/grey shirt.PNG')">
+                    <img src="./foto/Clothes/grey sweater.PNG" alt="Shirt 2" onclick="selectLayer('clothes-layer', './foto/Clothes/grey sweater.PNG')">
+                    <img src="./foto/Clothes/sailor shirt.PNG" alt="Shirt 3" onclick="selectLayer('clothes-layer', './foto/Clothes/sailor shirt.PNG')">
+                    <img src="./foto/Clothes/work apron.PNG" alt="Shirt 4" onclick="selectLayer('clothes-layer', './foto/Clothes/work apron.PNG')">
+                    <img src="./foto/Clothes/yellow hoodie.PNG" alt="Shirt 5" onclick="selectLayer('clothes-layer', './foto/Clothes/yellow hoodie.PNG')">
                 </div>
-                <div class="hands" style="display: none;">
-                    <img src="./foto/hands/bayc_hands_gm.png" alt="Hand 1" onclick="selectLayer('hands-layer', './foto/hands/bayc_hands_gm.png')">
-                    <img src="./foto/hands/bayc_hands_shhhdark.png" alt="Hand 2" onclick="selectLayer('hands-layer', './foto/hands/bayc_hands_shhhdark.png')">
-                    <img src="./foto/hands/bayc_hands_turkey.png" alt="Hand 3" onclick="selectLayer('hands-layer', './foto/hands/bayc_hands_turkey.png')">
+                <div class="head" style="display: none;">
+                    <img src="./foto/Head/black hair.PNG" alt="Head 1" onclick="selectLayer('head-layer', './foto/Head/black hair.PNG')">
+                    <img src="./foto/Head/cowboy.PNG" alt="Head 2" onclick="selectLayer('head-layer', './foto/Head/cowboy.PNG')">
+                    <img src="./foto/Head/pot.PNG" alt="Head 3" onclick="selectLayer('head-layer', './foto/Head/pot.PNG')">
+                    <img src="./foto/Head/straw hat.PNG" alt="Head 4" onclick="selectLayer('head-layer', './foto/Head/straw hat.PNG')">
+                    <img src="./foto/Head/turban.PNG" alt="Head 5" onclick="selectLayer('head-layer', './foto/Head/turban.PNG')">
                 </div>
-                <div class="accessories" style="display: none;">
-                    <img src="./foto/Accesories/bayc_confetti.png" alt="Accessory 1" onclick="selectLayer('accessories-layer', './foto/Accesories/bayc_confetti.png')">
-                    <img src="./foto/Accesories/bayc_halloween_pumpkin_candy.png" alt="Accessory 2" onclick="selectLayer('accessories-layer', './foto/Accesories/bayc_halloween_pumpkin_candy.png')">
-                    <img src="./foto/Accesories/bayc_newape.png" alt="Accessory 3" onclick="selectLayer('accessories-layer', './foto/Accesories/bayc_newape.png')">
+                <div class="beak" style="display: none;">
+                    <img src="./foto/beak/angry.PNG" alt="Beak 1" onclick="selectLayer('beak-layer', './foto/beak/angry.PNG')">
+                    <img src="./foto/beak/cigar.PNG" alt="Beak 2" onclick="selectLayer('beak-layer', './foto/beak/cigar.PNG')">
+                    <img src="./foto/beak/mustache.PNG" alt="Beak 3" onclick="selectLayer('beak-layer', './foto/beak/mustache.PNG')">
+                    <img src="./foto/beak/tongue.PNG" alt="Beak 4" onclick="selectLayer('beak-layer', './foto/beak/tongue.PNG')">
+                    <img src="./foto/beak/tooth hole.PNG" alt="Beak 5" onclick="selectLayer('beak-layer', './foto/beak/tooth hole.PNG')">
+                </div>
+                <div class="eyes" style="display: none;">
+                    <img src="./foto/eyes/base.PNG" alt="Eyes 1" onclick="selectLayer('eyes-layer', './foto/eyes/base.PNG')">
+                    <img src="./foto/eyes/drunk.PNG" alt="Eyes 2" onclick="selectLayer('eyes-layer', './foto/eyes/drunk.PNG')">
+                    <img src="./foto/eyes/excited.PNG" alt="Eyes 3" onclick="selectLayer('eyes-layer', './foto/eyes/excited.PNG')">
+                    <img src="./foto/eyes/scared.PNG" alt="Eyes 4" onclick="selectLayer('eyes-layer', './foto/eyes/scared.PNG')">
+                    <img src="./foto/eyes/sunglasses.PNG" alt="Eyes 5" onclick="selectLayer('eyes-layer', './foto/eyes/sunglasses.PNG')">
                 </div>
                 <div class="backgrounds" style="display: none;">
-                    <img src="./foto/backgrounds/bayc_bg_apechain.png" alt="Background 1" onclick="selectLayer('background-layer', './foto/backgrounds/bayc_bg_apechain.png')">
-                    <img src="./foto/backgrounds/bayc_bg_apechain_black.png" alt="Background 2" onclick="selectLayer('background-layer', './foto/backgrounds/bayc_bg_apechain_black.png')">
-                    <img src="./foto/backgrounds/bayc_bg_xmastrees_red.png" alt="Background 3" onclick="selectLayer('background-layer', './foto/backgrounds/bayc_bg_xmastrees_red.png')">
+                    <img src="./foto/backgrounds/berry.png" alt="Background 1" onclick="selectLayer('background-layer', './foto/backgrounds/berry.png')">
+                    <img src="./foto/backgrounds/electric ice.png" alt="Background 2" onclick="selectLayer('background-layer', './foto/backgrounds/electric ice.png')">
+                    <img src="./foto/backgrounds/monad purple.png" alt="Background 3" onclick="selectLayer('background-layer', './foto/backgrounds/monad purple.png')">
                 </div>
             </div>
-            
         </div>
     </div>
 
@@ -110,13 +123,14 @@
                 link.click();
             });
         }
-        const burgerMenu = document.querySelector('.burger-menu');
-const navLinks = document.querySelector('.nav-links');
 
-burgerMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  burgerMenu.classList.toggle('active');
-});
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
