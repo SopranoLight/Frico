@@ -70,7 +70,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 42px 87px 72px 87px;
+  padding: 42px 87px 30px 87px;
   color: var(--color-btn);
 }
 .burger-menu {
@@ -146,8 +146,7 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 50px;
-  padding-bottom: 145px;
+  
 }
 .bg-main {
   position: absolute;
@@ -202,8 +201,10 @@ align-items: center;
 
 
 .frico {
-  max-width: 500px;
-  height: auto;
+  max-width: 900px;
+  max-height: 666px;
+  
+  
 }
 
 .frico img {
@@ -213,7 +214,7 @@ align-items: center;
 
 .frico_info {
   max-width: 500px;
-
+margin-right: 15px;
   text-align: left;
 }
 
