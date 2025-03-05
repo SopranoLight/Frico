@@ -173,7 +173,8 @@ align-items: center;
   max-width: 900px;
   max-height: 666px;
   
-  
+  /* max-width: 100%;
+  max-height: 100%; */
 }
 
 .frico img {
@@ -215,11 +216,15 @@ margin-right: 15px;
   font-size: 1rem;
   border-radius: 10px;
   text-align: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.8s ease;
+  background-color: none;
 }
 
 .btn_pfp a:hover {
-  background-color: none;
+  color: #031a3d;
+  background-color: #1d76c9;
+  border: #0666f5 2px solid;
+ 
 }
 
 /* section mouse-efect start */
@@ -509,8 +514,10 @@ footer {
   .main {
     flex-direction: column;
     padding: 20px;
+    justify-content: space-around;
     text-align: center;
     padding-bottom: 60px;
+    height: 70vh;
   }
   #linkll{
   display: none;
