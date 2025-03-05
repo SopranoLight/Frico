@@ -72,6 +72,8 @@ header {
   justify-content: space-between;
   padding: 42px 87px 30px 87px;
   color: var(--color-btn);
+  
+  
 }
 .burger-menu {
   display: none;
@@ -144,9 +146,19 @@ align-items: center;
 
 .main {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(./img/photo_2025-03-03_19-10-10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.bb{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
 }
 .bg-main {
   position: absolute;
@@ -155,49 +167,6 @@ align-items: center;
   left: 0;
 }
 
-.stickOne {
-  background-image: url(./img/палки.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 20vw; /* Ширина 20% від ширини екрана */
-  height: 20vw; /* Висота пропорційна ширині */
-  position: absolute;
-  left: 620px;
-  top: 370px; /* Розташування відносно ширини та висоти екрана */
-  transform: rotate(20deg); ; /* Розташування відносно ширини та висоти екрана */
-  z-index: -100;
-}
-
-.stickTwo {
-  background-image: url(./img/палки1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 10vw; /* Ширина 10% від ширини екрана */
-  height: 15vw; /* Висота пропорційна ширині */
-  position: absolute;
-  left: 50px;
-  top: 200px;
-  transform: rotate(-20deg); /* Розташування відносно ширини та висоти екрана */
-  z-index: -100;
-
-}
-
-.name {
-  background-image: url(./img/TEXT.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  transform: rotate(45deg);
-  top: 2px;
-  left: 400px; /* Розташування відносно ширини та висоти екрана */
-  width: 30vw; /* Ширина 20% від ширини екрана */
-  height: 20vw; /* Висота пропорційна ширині */
-  z-index: -100;
-
-}
 
 
 .frico {
@@ -219,18 +188,20 @@ margin-right: 15px;
 }
 
 .frico_info h1 {
-  font-size: 6rem;
+  font-size: 8rem;
   font-family: var(--font-family-AlbertSans, sans-serif);
   color: var(--color-text);
   margin-bottom: 20px;
+  -webkit-text-stroke: 2px #000;
 }
 
 .frico_info p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--color-text);
   font-family: var(--font-family-Shadows), sans-serif;
   line-height: 1.5;
   margin-bottom: 70px;
+  -webkit-text-stroke: px #000;
 }
 
 .btn_pfp a {
